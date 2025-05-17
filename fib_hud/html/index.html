@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIB HUD</title>
+    <link rel="stylesheet" href="tailwind.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="custom.css">
+</head>
+<body class="bg-transparent h-screen w-screen overflow-hidden">
+    <div class="player-info fixed top-4 left-4 flex flex-col space-y-2">
+        <div class="flex items-center bg-black bg-opacity-60 px-3 py-1 rounded-lg shadow-lg border border-gray-700">
+            <div id="player-id" class="text-white font-semibold">ID: 0</div>
+        </div>
+        <div class="flex items-center bg-black bg-opacity-60 px-3 py-1 rounded-lg shadow-lg border border-gray-700">
+            <div id="player-job" class="text-white font-semibold">Unemployed</div>
+        </div>
+        <div class="flex items-center bg-black bg-opacity-60 px-3 py-1 rounded-lg shadow-lg border border-gray-700">
+            <span id="cash" class="text-green-400 font-semibold">$0</span>
+        </div>
+        
+  <div class="flex items-center bg-black/60 px-3 py-1 rounded-lg shadow-lg border border-gray-700">
+    <img src="icons/voice.png" alt="Voice" class="h-5 w-5 mr-2">
+    <div class="flex items-center space-x-1">
+        <div id="voice-dot-1" class="h-3 w-3 rounded-full bg-gray-400 opacity-50"></div>
+        <div id="voice-dot-2" class="h-3 w-3 rounded-full bg-gray-400 opacity-50"></div>
+        <div id="voice-dot-3" class="h-3 w-3 rounded-full bg-gray-400 opacity-50"></div>
+    </div>
+  </div>
+
+    <div class="status-bars fixed left-6 bottom-60 flex flex-col space-y-1">
+        <div class="flex items-center space-x-2">
+            <img src="icons/health.png" alt="Health" class="h-4 w-4">
+            <div class="w-40 h-2 bg-black bg-opacity-60 rounded-full overflow-hidden">
+                <div id="health-fill" class="h-full bg-red-500 rounded-full" style="width: 100%;"></div>
+            </div>
+        </div>
+        
+        <div class="flex items-center space-x-2">
+            <img src="icons/armor.png" alt="Armor" class="h-4 w-4">
+            <div class="w-40 h-2 bg-black bg-opacity-60 rounded-full overflow-hidden">
+                <div id="armor-fill" class="h-full bg-blue-500 rounded-full" style="width: 0%;"></div>
+            </div>
+        </div>
+        
+        <div class="flex items-center space-x-2">
+            <img src="icons/food.png" alt="Food" class="h-4 w-4">
+            <div class="w-40 h-2 bg-black bg-opacity-60 rounded-full overflow-hidden">
+                <div id="food-fill" class="h-full bg-yellow-500 rounded-full" style="width: 100%;"></div>
+            </div>
+        </div>
+        
+        <div class="flex items-center space-x-2">
+            <img src="icons/water.png" alt="Water" class="h-4 w-4">
+            <div class="w-40 h-2 bg-black bg-opacity-60 rounded-full overflow-hidden">
+                <div id="water-fill" class="h-full bg-blue-400 rounded-full" style="width: 100%;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="speedometer" class="fixed bottom-4 right-4 bg-black bg-opacity-70 p-4 rounded-lg border border-gray-700 shadow-lg hidden">
+        <div class="flex items-center justify-between mb-2">
+            <div class="text-center">
+                <div id="speed-text" class="text-white text-3xl font-digital">0 km/h</div>
+                <div class="text-gray-400 text-xs">SPEED</div>
+            </div>
+            
+            <div class="flex space-x-3">
+                <div class="text-center">
+                    <img id="icon-seatbelt" src="icons/seatbeltoff.png" alt="Seatbelt" class="h-6 w-6 mx-auto opacity-60">
+                    <div class="text-gray-400 text-xs">SEATBELT</div>
+                </div>
+                
+                <div class="text-center">
+                    <img id="icon-engine" src="icons/engineon.png" alt="Engine" class="h-6 w-6 mx-auto opacity-60">
+                    <div class="text-gray-400 text-xs">ENGINE</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-2">
+            <div class="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
+                <div id="rpm-bar" class="h-full bg-green-500 rounded-full" style="width: 0%;"></div>
+            </div>
+            <div class="text-gray-400 text-xs text-center mt-1">RPM</div>
+        </div>
+        
+        <div id="gear-display" class="flex justify-center space-x-2 mb-2">
+            <span class="gear" data-gear="R">R</span>
+            <span class="gear" data-gear="1">1</span>
+            <span class="gear" data-gear="2">2</span>
+            <span class="gear" data-gear="3">3</span>
+            <span class="gear" data-gear="4">4</span>
+            <span class="gear" data-gear="5">5</span>
+            <span class="gear" data-gear="6">6</span>
+            <span class="gear" data-gear="7">7</span>
+            <span class="gear" data-gear="8">8</span>
+        </div>
+        
+        <div>
+            <div class="flex items-center justify-between text-xs text-gray-400 mb-1">
+                <span>E</span>
+                <span>FUEL</span>
+                <span>F</span>
+            </div>
+            <div class="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
+                <div id="fuel-fill" class="h-full bg-green-500 rounded-full" style="width: 100%;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="hud.js"></script>
+</body>
+</html>

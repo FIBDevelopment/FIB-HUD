@@ -1,0 +1,38 @@
+.text-fib-blue { color: #1e3a8a; }
+.bg-fib-blue { background-color: #1e3a8a; }
+.border-fib-blue { border-color: #1e3a8a; }
+.text-fib-red { color: #dc2626; }
+.bg-fib-red { background-color: #dc2626; }
+.border-fib-red { border-color: #dc2626; }
+.text-fib-gray { color: #1f2937; }
+.bg-fib-gray { background-color: #1f2937; }
+.border-fib-gray { border-color: #1f2937; }
+
+.bg-black\/60 {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.bg-black\/70 {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.bg-opacity-60 {
+    --tw-bg-opacity: 0.6 !important;
+}
+
+.bg-opacity-70 {
+    --tw-bg-opacity: 0.7 !important;
+}
+
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
