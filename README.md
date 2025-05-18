@@ -1,62 +1,81 @@
-for fast support, join the FIB Development Discord Server -> https://discord.gg/9Z8mDBjtR8
-__________________________________________________________________________________________________________________________________________________________________________________________________
-📟 FIB HUD — Immersive and Modular HUD for ESX (QBCore & Config Coming Soon)
+# 📟 FIB HUD — Immersive and Modular HUD for ESX  
+(*QBCore & Config Support Coming Soon*)
 
-FIB HUD is a modern, performance-optimized HUD built for FiveM servers running ESX. It provides all essential player and vehicle information in a clean UI — perfect for serious roleplay servers.
-⚠️ Note: This is an early access open-source version. Current customization is only possible via code. A full config system and GUI customization options are planned for the next update.
+FIB HUD is a modern, performance-optimized HUD for FiveM servers using ESX. It displays all essential player and vehicle information in a clean and immersive UI — perfect for serious roleplay environments.
 
-✅ Current Features
-💵 Cash Display: Live wallet updates
-🆔 Player Info: Player ID and job display with color coding
-🔊 Voice Range Indicator: Fully integrated with pma-voice and mumble-voip (whisper, normal, shout)
-❤️ Status Bars: Health & armor -> Hunger & thirst (via esx_status)
+> ⚠️ **Note:** This is an early-access open-source version. Currently, customization is only possible via code. A full config system and GUI customization are planned for the next update.
 
-🚗 Vehicle HUD:
-Speed, RPM (animated), Gear display
-Fuel gauge with warning levels
-Engine health indicator
-Seatbelt status and warnings
+---
 
-🔒 Seatbelt System:
-Toggle with G key
-Sound effects for buckle/unbuckle
-Exit prevention when buckled
-Automatic seatbelt warnings at high speeds
+## 🔗 Fast Support
 
-🔜 Upcoming in the Next Update
-✅ QBCore Support
-⚙️ config.lua for easy server-side customization
-🎛️ In-game HUD editor:
-Enable/disable individual HUD components
-Drag-and-drop repositioning
-Save personal layouts per player
-💡 New HUD elements and indicators
+👉 **Join the FIB Development Discord:** [https://discord.gg/9Z8mDBjtR8](https://discord.gg/9Z8mDBjtR8)
 
-🛠️ Built With
-TailwindCSS + HTML + JS for NUI
+---
 
-Modular file structure:
+## ✅ Current Features
 
-main.lua: Core logic
+### 🧍 Player HUD
 
-seatbelt.lua: Dedicated seatbelt logic
+- 💵 **Cash Display:** Live wallet updates  
+- 🆔 **Player Info:** Player ID and job display with color coding  
+- 🔊 **Voice Range Indicator:** Integrated with `pma-voice` and `mumble-voip` (whisper, normal, shout)  
+- ❤️ **Status Bars:** Health, armor, hunger, and thirst (`esx_status`)
 
-hud.js: Frontend logic
+### 🚗 Vehicle HUD
 
-index.html: Layout
+- Speed, animated RPM, and gear display  
+- Fuel gauge with warning levels  
+- Engine health indicator  
+- Seatbelt status and warnings
 
-🔗 Dependencies
-es_extended
+### 🔒 Seatbelt System
 
-esx_status
+- Toggle with the `G` key  
+- Buckle/unbuckle sound effects  
+- Prevents exit while buckled  
+- Auto warnings at high speeds
 
-pma-voice or Mumble
+---
 
-📦 Installation
-Place the resource in your resources folder.
+## 🔜 Coming Soon
 
-Start it after all dependencies.
+- ✅ **QBCore** support  
+- ⚙️ `config.lua` for easy server-side customization  
+- 🎛️ **In-Game HUD Editor**:  
+  - Enable/disable HUD elements  
+  - Drag-and-drop positioning  
+  - Save personal layouts per player  
+- 💡 New HUD indicators and modules
 
-Add ensure fib_hud to your server.cfg.
+---
 
-Let me know if you want this translated into German, or formatted for FiveM forums, or Discord releases!
+## 🛠️ Built With
+
+- **Frontend:** HTML, JS, TailwindCSS  
+- **Modular file structure:**  
+  - `main.lua` – Core logic  
+  - `seatbelt.lua` – Seatbelt system  
+  - `hud.js` – Frontend logic  
+  - `index.html` – UI layout
+
+---
+
+## 📦 Dependencies
+
+- `es_extended`  
+- `esx_status`  
+- `pma-voice` **or** `mumble-voip`
+
+---
+
+## 📥 Installation
+
+1. Place the resource in your `resources` folder  
+2. Make sure all dependencies are started first  
+3. Add this line to your `server.cfg`:
+
+   ```cfg
+   ensure fib_hud 
+
+![layout](https://github.com/user-attachments/assets/f0bf5f28-d46d-4f89-8215-817610bdf2e3)
